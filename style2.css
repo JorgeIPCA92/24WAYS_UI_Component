@@ -1,0 +1,198 @@
+*{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    padding:0 60px 0 0;
+    margin: 0;
+}
+
+
+header{
+    background: #2a0126;
+    width: 100%;
+    height: 70px;
+    text-align: left;
+}
+
+h1{
+    margin: auto;
+    width: 50%;
+    padding: 20px 0;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+h2{
+    margin: auto;
+    width: 50%;
+    font-size: 40px;
+    color: #fa0f44;
+}
+
+span{
+    color: #fa0f44;
+    font-size: 10px;
+}
+
+a{
+    color: white;
+}
+
+.intro{
+    background: #49004a;
+    color: white;
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    padding: 40px 0 10px 0;
+}
+
+.txt{
+    margin: auto;
+    width: 50%;
+    font-size: 18px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+}
+
+.column {
+    padding: 3px;
+    background: #cccc;
+    padding-left: 15px;
+    border: 1px solid black;
+    
+}
+
+.box{
+    background: yellow;
+    position: relative;
+    display: flex;
+}
+
+.num{
+    background: red;
+    width: 10%;
+    color: white;
+}
+
+
+.photo{
+    background: green;
+    position: relative;
+    width: 104px;
+    height: 64px;
+    margin-left: 10px;
+}
+
+.tit{
+    background:blue;
+    width: 100%;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+}
+
+.section{
+   margin-right: 15px; 
+}
+
+@media (min-width: 0px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+    }
+
+@media (min-width: 540px) {
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+
+@media (min-width: 770px) {
+   .row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    }
+
+@media (min-width: 1000px) {
+    .row {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    }
+
+/* SIDEBAR MENU */
+.whiteBar {
+    position: fixed;
+    z-index: 3;
+    width: 70px;
+    height: 100%;
+    margin-top: 70px;
+    background: rgb(233,233,233);
+    right: 0;
+}
+
+.overlay {   
+    height: 100%;
+    width: 70px;
+    position: fixed; 
+    z-index: 1; 
+    right: 0;
+    top: 0;
+    background-color: rgb(233,233,233); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+}
+
+.overlay-open {   
+    height: 100%;
+    width: 325px;
+    position: fixed; 
+    z-index: 1; 
+    right: 0;
+    top: 0;
+    background-color: rgb(200,200,200); 
+    overflow-x: hidden; 
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 60px; 
+    width: 260px;
+    text-align: center; 
+    margin-top: 10px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.overlay a, .overlay-open a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.overlay a:hover, .overlay-open a:hover {
+    background: #fabada;
+}
+
+.overlay a:focus, .overlay-open a:focus {
+    color: #f1f1f1;
+    background: red;
+}
+
+.overlay .closebtn, .overlay-open .closebtn {
+    position: absolute;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+}
+
